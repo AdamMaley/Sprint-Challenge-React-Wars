@@ -6,12 +6,12 @@ import Card from "./components/card/Card.js";
 import "./components/card/Card.css";
 
 function App() {
-  const [data, setData] = useState({});
+  const [data, setData] = useState([]);
 
 
   useEffect(() => {
     axios.get(`https://swapi.co/api/people/`)
-  .then((res) => setData(res.data))
+  .then((res) => setData(res.data.results))
   
   .catch((err) => console.log(err));
     
@@ -20,7 +20,12 @@ function App() {
   return (
     <div className="App">
       <h1 className="Header">React Wars</h1>
-      <Card data={data} />
+      {data.map((result, index) => {
+                return (
+                    <Card character={data} key={index} />
+                );
+
+            })}
     </div>
   );
 }
