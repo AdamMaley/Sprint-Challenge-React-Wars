@@ -1,12 +1,14 @@
 import React from 'react'
-import "./Card.css";
+import StyledComponent from "./Card.css";
 
 
 function Card(props) {
     console.log(props);
  
     return (
-        <div>
+
+        
+        <StyledComponent>
             <h1>Name: {props.character.name}</h1>
             <p>Height: {props.character.height}</p>
             <p>Mass: {props.character.mass}</p>
@@ -16,10 +18,12 @@ function Card(props) {
             <p>Birth Year: {props.character.birth_year}</p>
             <p>Gender: {props.character.gender}</p>
             <p>Homeworld: {props.character.homeworld}</p>
-        </div>
+        </StyledComponent>
     )
 
 }
+
+
 
 
 export default Card;
