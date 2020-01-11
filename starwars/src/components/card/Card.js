@@ -1,5 +1,16 @@
 import React from 'react'
-import StyledComponent from "./Card.css";
+import styled from 'styled-components';
+import "./Card.css";
+
+
+
+const CardWrapper = styled.div`
+        display: flex;
+        flex-direction: column;
+        width: 50%;
+`;
+
+
 
 
 function Card(props) {
@@ -8,7 +19,7 @@ function Card(props) {
     return (
 
         
-        <StyledComponent>
+        <CardWrapper>
             <h1>Name: {props.character.name}</h1>
             <p>Height: {props.character.height}</p>
             <p>Mass: {props.character.mass}</p>
@@ -18,7 +29,7 @@ function Card(props) {
             <p>Birth Year: {props.character.birth_year}</p>
             <p>Gender: {props.character.gender}</p>
             <p>Homeworld: {props.character.homeworld}</p>
-        </StyledComponent>
+        </CardWrapper>
     )
 
 }
