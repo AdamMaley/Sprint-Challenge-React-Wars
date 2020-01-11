@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
 import './App.css';
-
 import Card from "./components/card/Card.js";
 import "./components/card/Card.css";
 
@@ -22,7 +21,7 @@ function App() {
       <h1 className="Header">React Wars</h1>
       {data.map((result, index) => {
                 return (
-                    <Card character={data} key={index} />
+                    <Card character={result} key={index} />
                 );
 
             })}
