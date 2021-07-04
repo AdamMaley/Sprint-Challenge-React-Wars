@@ -26,13 +26,23 @@ Demonstrate your understanding of this Sprint's concepts by answering the follow
 
 - [ ] What is React JS and what problems does it try and solve? Support your answer with concepts introduced in class and from your personal research on the web.
 
+React was made by Facebook, it's used to create UI. Using the regular DOM is slow in loading times, so React uses the Virtual DOM to decide which pieces of information have changed (state) and then only changes those.
+
 - [ ] What does it mean to _think_ in react?
+
+??????
 
 - [ ] Describe state.
 
+state is the object you store values in. When state changes it changes what you see on the screen real time(re-render).
+
 - [ ] Describe props.
 
+props are arguments like in JS functions, used to pass information from children to parent.
+
 - [ ] What are side effects, and how do you sync effects in a React component to state or prop changes?
+
+Anything that affects something outside the scope of the function being executed. 
 
 ## Project Set Up
 
